@@ -1,0 +1,7 @@
+---
+import WhatsappIcon from '@/icones/WhatsApp.astro';
+import { WHATSAPP_LINKEABLE } from 'astro:env/client';
+---
+<a class="float-button flex" target="_blank" href={'https://wa.me/' + WHATSAPP_LINKEABLE}>
+    <WhatsappIcon extraClass="w-8 h-8 sm:w-10 sm:h-10" />
+</a>

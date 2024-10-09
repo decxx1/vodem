@@ -1,0 +1,22 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Hero from '@/components/Hero.astro';
+const preloadImages = [
+	{
+		href:"/images/index/hero.jpg",
+		as: "image",
+		type: "image/jpg",
+	}
+];
+---
+
+<Layout
+	title="Vodem - Obras Industriales"
+	canonical="https://vodem.com.ar"
+	metaTitle="Vodem - Obras Industriales"
+	metaDescription="Descubre los principales atractivos turísticos de Mendoza, visitas a bodegas mendocinas, degustaciones, recorridos por la alta montaña, tours con guías"
+	metaImg="https://vodem.com.ar/images/hero-potrerillos.jpg"
+	preLoad={preloadImages}
+>
+	<Hero />
+</Layout>
