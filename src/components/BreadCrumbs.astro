@@ -1,0 +1,49 @@
+---
+interface Props {
+    title: string;
+}
+const { title } = Astro.props;
+---
+<section class="h-full w-full mt-16">
+    <div class="relative">
+        <div class="absolute inset-0 z-10">
+            <div class="bg-gris-cemento w-full md:w-max clip-diagonal-inverso md:pl-20 md:pr-72 xl:pl-32 xl:pr-[30rem] pt-16 pb-16 md:pt-20 md:pb-20" >
+                <img
+                    src="/images/logos/logo-vodem.svg"
+                    class="w-24 min-[550px]:w-32 md:w-40 h-auto mx-auto"
+                    alt="logo de vodem"
+                    loading="lazy"
+                />
+            </div>
+        </div>
+    </div>
+    <div class="w-full bg-amarillo py-16">
+        <h2 class="uppercase text-right text-7xl font-light text-gris-cemento mr-[10%]">{title}</h2>
+    </div>
+</section>
+
+<style>
+    @media (min-width: 768px) {
+        .clip-diagonal {
+            clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 100%);
+        }
+    }
+    @media (min-width: 768px) {
+        .clip-diagonal-inverso {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 40% 100%, 0% 100%);
+        }
+    }
+    @media (max-width: 767px) {
+        .clip-diagonal-inverso {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 50% 100%, 50% 100%);
+        }
+    }
+    @media (min-width: 640px) {
+        .clip-rhombus {
+            transform:skew(-40deg);
+        }
+        .text-rhombus {
+            transform:skew(40deg);
+        }
+    }
+</style>
