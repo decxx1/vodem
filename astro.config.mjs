@@ -23,6 +23,22 @@ export default defineConfig({
         WHATSAPP_LINKEABLE: envField.string({
           context:'client',
           access: 'public'
+        }),
+        EMAIL: envField.string({
+          context:'client',
+          access: 'public'
+        }),
+        ENDPOINT: envField.string({
+          context:'client',
+          access: 'public'
+        }),
+        SITE_KEY: envField.string({
+          context:'client',
+          access: 'public'
+        }),
+        SECRET_KEY: envField.string({
+          context:'client',
+          access: 'public'
         })
       }
     }

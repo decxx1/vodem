@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from 'astro:transitions';
 // Supports weights 100-900
 import '@fontsource-variable/montserrat';
 import Footer from '@/components/Footer.astro';
@@ -66,6 +67,7 @@ const {
 				<link rel="preload" {as} {href} {type} />
 			))
 		}
+		<ViewTransitions />
 	</head>
 	<body class="font-montserrat bg-gris-bg scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400">
 		<Header />

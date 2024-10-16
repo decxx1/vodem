@@ -1,0 +1,21 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import BreadCrumbs from '@/components/BreadCrumbs.astro';
+import Form from '@/components/Form.jsx';
+import { SITE_KEY } from 'astro:env/client';
+---
+
+<Layout
+	title="Vodem - Contacto"
+	canonical="https://vodem.com.ar/contacto"
+	metaTitle="Vodem - Contacto"
+	metaDescription=""
+	metaImg="https://vodem.com.ar/images/hero-potrerillos.jpg"
+>
+<div class="bg-[url('/images/contacto/pared-hormigon.jpg')] bg-no-repeat bg-cover bg-center h-full w-full bg-gray-500 bg-blend-multiply">
+	<BreadCrumbs title="Contacto" />
+    <Form client:load />
+</div>
+</Layout>
+<!-- recaptcha v3 -->
+<script async src={'https://www.google.com/recaptcha/api.js?render=' + SITE_KEY}></script>
