@@ -1,0 +1,31 @@
+---
+import { proyects } from "@/data/Proyects.json";
+---
+<section class="mt-20 md:mt-40 lg:mt-32 xl:mt-28 mb-24">
+    <div class="text-gris-cemento text-center md:text-right md:mr-[10%]">
+        <p class="font-normal text-2xl sm:text-3xl mb-12"><span class="p-1 bg-amarillo font-bold">Resultados tangibles:</span> El impacto de nuestros proyectos</p>
+        <h2 class="font-bold text-4xl sm:text-5xl md:text-6xl max-w-screen-xl ml-auto">Soluciones que marcan la diferencia</h2>
+    </div>
+    <section class="container mx-auto mt-24">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto">
+            {   
+                proyects.map((proyect, index) => (
+                    <div class="w-full h-full py-6 max-sm:px-6">
+                        <img 
+                            src={proyect.thumb}
+                            alt={proyect.title}
+                            class="object-cover w-full h-full"
+                            loading="lazy"
+                        />
+                        <h3 class="text-gris-cemento font-semibold uppercase text-md mt-4">
+                            <svg class="inline mx-2 w-9" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.39 12">
+                                <path style="fill:#f6ca0f" d="M0 0h38.39v12H0z" data-name="Capa 1"/>
+                            </svg>
+                            {proyect.title}
+                        </h3>
+                    </div>
+                ))
+            }
+        </div>
+    </section>
+</section>

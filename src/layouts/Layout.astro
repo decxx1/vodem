@@ -67,7 +67,7 @@ const {
 			))
 		}
 	</head>
-	<body class="font-montserrat bg-gris-bg scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400 dark:scrollbar-track-gray-900 dark:scrollbar-thumb-gray-700">
+	<body class="font-montserrat bg-gris-bg scrollbar scrollbar-w-3 scrollbar-thumb-rounded-[0.25rem] scrollbar-track-gray-200 scrollbar-thumb-gray-400">
 		<Header />
 		<main>
 			<slot />
@@ -85,18 +85,7 @@ initDropdowns();
 
 </script>
 
-<script is:inline>
-	// if (
-	// 	localStorage.getItem('color-theme') === 'dark' ||
-	// 	(!('color-theme' in localStorage) &&
-	// 		window.matchMedia('(prefers-color-scheme: dark)').matches)
-	// ) {
-	// 	document.documentElement.classList.add('dark');
-	// } else {
-	// 	document.documentElement.classList.remove('dark');
-	// }
-	
-</script>
+
 <style is:global>
 
 /*recaptcha*/

@@ -1,0 +1,35 @@
+{
+    "proyects": [
+        {
+            "original": "/images/proyectos/arga.jpeg",
+            "thumb": "/images/proyectos/thumb/arga.webp",
+            "title": "Arga"
+        },
+        {
+            "original": "/images/proyectos/bodega-la-rural.jpeg",
+            "thumb": "/images/proyectos/thumb/bodega-la-rural.webp",
+            "title": "Bodega la rural"
+        },
+        {
+            "original": "/images/proyectos/ezeiza.jpeg",
+            "thumb": "/images/proyectos/thumb/ezeiza.webp",
+            "title": "Ezeiza"
+        },
+        {
+            "original": "/images/proyectos/lorenzo-automotores.jpeg",
+            "thumb": "/images/proyectos/thumb/lorenzo-automotores.webp",
+            "title": "Lorenzo Automotores"
+        },
+        {
+            "original": "/images/proyectos/marolio.jpeg",
+            "thumb": "/images/proyectos/thumb/marolio.webp",
+            "title": "Marolio"
+        },
+        {
+            "original": "/images/proyectos/planta-uno.jpeg",
+            "thumb": "/images/proyectos/thumb/planta-uno.webp",
+            "title": "Planta uno"
+        }
+        
+    ]
+}
