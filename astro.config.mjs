@@ -24,6 +24,22 @@ export default defineConfig({
           context:'client',
           access: 'public'
         }),
+        TELPHONE_READBLE: envField.string({
+          context:'client',
+          access: 'public'
+        }),
+        TELPHONE_LINKEABLE: envField.string({
+          context:'client',
+          access: 'public'
+        }),
+        INSTAGRAM: envField.string({
+          context:'client',
+          access: 'public'
+        }),
+        LINKEDIN: envField.string({
+          context:'client',
+          access: 'public'
+        }),
         EMAIL: envField.string({
           context:'client',
           access: 'public'
