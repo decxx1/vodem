@@ -1,3 +1,6 @@
+---
+import Menu from '@/components/Menu.jsx';
+---
 <header class="fixed bg-gris-claro z-50 top-0 left-0 w-full">
     <div class="flex flex-row items-center justify-between md:hidden pt-9 pb-9">
         <a href="/" class="ml-12">
@@ -21,36 +24,6 @@
         </button>
     </div>
     <nav class="hidden md:flex justify-end pr-10 lg:pr-20 xl:pr-40 pt-10 pb-8 max-md:shadow-md" id="mobile-menu-2">
-        <ul class="flex flex-col md:flex-row max-md:text-center gap-4 text-gris-cemento font-normal">
-            <li>
-                <a class="uppercase text-lg md:text-xl lg:text-2xl font-bold hover:font-bold" href="/">
-                    Inicio
-                </a>
-            </li>
-            <li class="px-2 max-md:hidden">|</li>
-            <li>
-                <a class="uppercase text-lg md:text-xl lg:text-2xl hover:font-bold" href="/empresa">
-                    Empresa
-                </a>
-            </li>
-            <li class="px-2 max-md:hidden">|</li>
-            <li>
-                <a class="uppercase text-lg md:text-xl lg:text-2xl hover:font-bold" href="/servicios">
-                    Servicios
-                </a>
-            </li>
-            <li class="px-2 max-md:hidden">|</li>
-            <li>
-                <a class="uppercase text-lg md:text-xl lg:text-2xl hover:font-bold" href="/proyectos">
-                    Proyectos
-                </a>
-            </li>
-            <li class="px-2 max-md:hidden">|</li>
-            <li>
-                <a class="uppercase text-lg md:text-xl lg:text-2xl hover:font-bold" href="/contacto">
-                    Contacto
-                </a>
-            </li>
-        </ul>
+        <Menu client:load/>
     </nav>
 </header>
