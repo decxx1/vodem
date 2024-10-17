@@ -1,6 +1,4 @@
----
 
----
 <section class="bg-[url('/images/index/hero.webp')] bg-no-repeat bg-cover bg-center h-full w-full sm:mt-14">
     <div class="relative">
         <div class="absolute inset-0 z-10">
@@ -26,7 +24,7 @@
         <div class="relative w-full lg:ml-[10%] pt-40 pb-32">
             <div class="absolute inset-0 bg-amarillo mix-blend-multiply z-0"></div>
             <div class="flex max-sm:flex-col max-sm:items-center justify-center lg:justify-end relative lg:right-[12%] lg:mr-10">
-                <div class="max-sm:mb-6 relative w-[80%] sm:w-max py-5 sm:py-2.5 sm:px-4 md:py-5 md:px-8 xl:py-7 xl:px-12 min-[1665px]:py-8 min-[1665px]:px-16 outline outline-3 outline-white clip-rhombus">
+                <div class="max-sm:mb-6 relative w-[70%] sm:w-max py-5 sm:py-2.5 sm:px-4 md:py-5 md:px-8 xl:py-7 xl:px-12 min-[1665px]:py-8 min-[1665px]:px-16 outline outline-3 outline-white clip-rhombus">
                     <div class="absolute inset-0 bg-black/50 mix-blend-multiply z-0"></div>
                     <h2 class="relative z-10 text-center text-base sm:text-sm md:text-base xl:text-xl min-[1665px]:text-2xl text-white text-rhombus uppercase font-extrabold">
                         Urbanizaciones
@@ -35,7 +33,7 @@
                 <p class="text-white sm:hidden mb-16 text-lg text-center">
                     <span class="font-bold block">Crecimiento sostenible</span>de las comunidades
                 </p>
-                <div class="max-sm:mb-6 relative w-[80%] sm:w-max py-5 sm:py-2.5 sm:px-4 md:py-5 md:px-8 xl:py-7 xl:px-12 min-[1665px]:py-8 min-[1665px]:px-16 outline outline-3 outline-white clip-rhombus">
+                <div class="max-sm:mb-6 relative w-[70%] sm:w-max py-5 sm:py-2.5 sm:px-4 md:py-5 md:px-8 xl:py-7 xl:px-12 min-[1665px]:py-8 min-[1665px]:px-16 outline outline-3 outline-white clip-rhombus">
                     <div class="absolute inset-0 bg-black/50 mix-blend-multiply z-0 "></div>
                     <h2 class="relative z-10 text-center text-base sm:text-sm md:text-base xl:text-xl min-[1665px]:text-2xl text-white text-rhombus uppercase font-extrabold">
                         Obras industriales
@@ -44,7 +42,7 @@
                 <p class="text-white sm:hidden mb-16 text-lg text-center">
                     <span class="font-bold block">Calidad y durabilidad</span>en cada proyecto
                 </p>
-                <div class="max-sm:mb-6 relative w-[80%] sm:w-max py-5 sm:py-2.5 sm:px-4 md:py-5 md:px-8 xl:py-7 xl:px-12 min-[1665px]:py-8 min-[1665px]:px-16 outline outline-3 outline-white clip-rhombus">
+                <div class="max-sm:mb-6 relative w-[70%] sm:w-max py-5 sm:py-2.5 sm:px-4 md:py-5 md:px-8 xl:py-7 xl:px-12 min-[1665px]:py-8 min-[1665px]:px-16 outline outline-3 outline-white clip-rhombus">
                     <div class="absolute inset-0 bg-black/50 z-0"></div>
                     <h2 class="relative z-10 text-center text-base sm:text-sm md:text-base xl:text-xl min-[1665px]:text-2xl text-white text-rhombus uppercase font-extrabold">
                         Pisos de hormigón
@@ -65,9 +63,9 @@
                     <span class="font-bold">Funcionalidad y rendimiento</span><br/>a largo plazo
                 </p> 
             </div>
-            <div class="mt-64 mb-24" id="animation-carousel" data-carousel="slide">
-                <div class="relative lg:right-[5%]">
-                    <div class="flex flex-row justify-center items-center" id="carousel-items">
+            <div class="mt-32 sm:mt-64 mb-24"  >
+                <div class="lg:right-[5%]" id="animation-carousel" data-carousel="slide">
+                    <div class="relative overflow-hidden h-32 flex flex-row justify-center items-center" id="carousel-items">
                     
                     </div>
                 </div>
@@ -76,29 +74,26 @@
         
         
     </div>
+    
 </section>
-<script>
-    import {
-        initCarousels,
-    } from 'flowbite';
-    import { clients } from "@/data/Clients.json";
-    initCarousels();
 
-    function createCarouselItems(logosPerSlide) {
+<script>
+import { clients } from "@/data/Clients.json";
+
+function createCarouselItems(logosPerSlide: number) {
     const carouselContainer = document.getElementById('carousel-items');
-    carouselContainer.innerHTML = ''; // Limpiar contenido existente
-    let slideDiv = null;
-    let slideDiv2 = null;
+    let slideDiv: HTMLElement  = null;
+    let slideDiv2: HTMLElement  = null;
 
     clients.forEach((logo, index) => {
         // Cada vez que empieza un nuevo slide, crear un div nuevo
         if (index % logosPerSlide === 0) {
             slideDiv = document.createElement('div');
-            slideDiv.className = 'hidden duration-700 ease-in-out mx-auto';
+            slideDiv.className = 'hidden duration-700 ease-in-out -translate-x-full absolute inset-0 transition-transform transform z-30';
             slideDiv.setAttribute('data-carousel-item', '');
             carouselContainer.appendChild(slideDiv);
             slideDiv2 = document.createElement('div');
-            slideDiv2.className = 'grid grid-cols-1 items-center justify-center gap-10 sm:gap-28 2xl:gap-36  sm:grid-cols-3 sm:max-w-screen-sm lg:max-w-screen-md mx-auto';
+            slideDiv2.className = 'grid grid-cols-1 items-center justify-center sm:gap-28 2xl:gap-36 sm:grid-cols-3 max-w-96 sm:max-w-screen-sm lg:max-w-screen-md mx-auto';
             slideDiv.appendChild(slideDiv2);
         }
 
@@ -111,17 +106,19 @@
 }
 
 function setupCarousel() {
-  if (window.innerWidth >= 640) {
-    // Pantallas grandes, 3 logos por slide
-    createCarouselItems(3);
-  } else {
-    // Pantallas pequeñas, 1 logo por slide
-    createCarouselItems(1);
-  }
+    if (window.innerWidth >= 640) {
+        // Pantallas grandes, 3 logos por slide
+        createCarouselItems(3);
+    } else {
+        // Pantallas pequeñas, 1 logo por slide
+        createCarouselItems(1);
+    }
 }
-
-// Inicializar el carrusel
-setupCarousel();
+//iniciar al cargar el DOM
+window.addEventListener('DOMContentLoaded', () => {
+    // Inicializar el carrusel
+    setupCarousel();
+})
 </script>
 <style>
     @media (min-width: 768px) {
