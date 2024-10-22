@@ -4,8 +4,9 @@
         <div class="absolute inset-0 z-10">
             <div class="md:bg-gris-cemento max-sm:mt-24 w-full md:w-max clip-diagonal-inverso md:pl-16 lg:pl-20 md:pr-[25%] xl:pl-32 xl:pr-[30%] pt-32 pb-10 md:pt-16 sm:pb-16" >
                 <img
+                    id="logo-vodem"
                     src="/images/logos/logo-vodem.svg"
-                    class="w-52 min-[550px]:w-64 md:w-40 xl:w-48 h-auto mx-auto"
+                    class="w-52 min-[550px]:w-64 md:w-40 xl:w-48 h-auto md:h-[182.833px] xl:h-[219.4px] mx-auto"
                     alt="logo de vodem"
                     loading="lazy"
                 />
@@ -16,7 +17,7 @@
         <div class="relative w-full lg:ml-[10%] pt-[35rem] sm:mt-16 pb-32 md:pb-14 sm:pt-[28rem] min-[1550px]:pt-96">
             <div class="absolute inset-0 bg-amarillo mix-blend-multiply z-0 clip-diagonal"></div>
             <div class="flex justify-center md:justify-end relative lg:right-[8%]">
-                <h1 class="relative z-10 text-white text-center md:text-right font-medium text-4xl min-[400px]:text-5xl sm:text-7xl xl:text-[5rem] min-[1550px]:text-8xl leading-normal sm:leading-none tracking-wide sm:tracking-widest lg:mr-10">
+                <h1 class="relative max-sm:px-4 z-10 text-white text-center md:text-right font-medium text-4xl min-[400px]:text-5xl sm:text-7xl xl:text-[5rem] min-[1550px]:text-8xl leading-normal sm:leading-none tracking-wide sm:tracking-widest lg:mr-10">
                     INNOVACIÓN <br/>Y SOLIDEZ <br/>DESDE LA BASE
                 </h1>
             </div>
@@ -52,29 +53,27 @@
                     <span class="font-bold block">Funcionalidad y rendimiento</span>a largo plazo
                 </p>
             </div>
-            <div class="max-sm:hidden flex justify-center lg:justify-end flex-row gap-8 md:gap-4 min-[1665px]:gap-16 relative text-sm md:text-2xl text-center text-white mt-10 lg:right-[12%] lg:mr-5 xl:mr-16 min-[1665px]:mr-32">
-                <p class="relative min-[1665px]:mr-[5%] max-xl:max-w-64">
+            <div class="max-sm:hidden flex justify-center lg:justify-end flex-row gap-8 md:gap-8 lg:gap-10 xl:gap-24 min-[1665px]:gap-16  relative text-sm md:text-xl min-[1665px]:text-2xl text-center text-white mt-10 md:right-[5%] lg:right-[18%] xl:right-[10%] lg:mr-5 xl:mr-16 min-[1665px]:mr-32">
+                <p class="relative min-[1665px]:mr-[5%] max-w-64 md:max-w-52 xl:max-w-96">
                     <span class="font-bold">Crecimiento sostenible</span><br/>de las comunidades
                 </p>
-                <p class="relative xl:mr-4 max-xl:max-w-64">
+                <p class="relative min-[1665px]:mr-4 max-w-64 md:max-w-52 xl:max-w-96">
                     <span class="font-bold">Calidad y durabilidad</span><br/>en cada proyecto
                 </p> 
-                <p class="relative max-xl:max-w-64">
+                <p class="relative max-w-64 md:max-w-52 xl:max-w-96">
                     <span class="font-bold">Funcionalidad y rendimiento</span><br/>a largo plazo
                 </p> 
             </div>
-            <div class="mt-32 sm:mt-64 mb-24"  >
+            <div class="mt-28 sm:mt-64 mb-20"  >
                 <div class="lg:right-[5%]" id="animation-carousel" data-carousel="slide">
-                    <div class="relative overflow-hidden h-32 flex flex-row justify-center items-center" id="carousel-items">
+                    <div class="relative overflow-hidden h-40 flex flex-row justify-center items-center" id="carousel-items">
                     
                     </div>
                 </div>
             </div>
         </div>
         
-        
     </div>
-    
 </section>
 
 <script>
@@ -138,3 +137,14 @@ window.addEventListener('DOMContentLoaded', () => {
         transform:skew(50deg);
     }
 </style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const logo: HTMLImageElement = document.querySelector("#logo-vodem");
+        const temporal: HTMLImageElement = document.querySelector("#temporal");
+        if (logo.complete) {
+            //eliminar el div temporal
+            temporal.remove();
+            logo.classList.remove("invisible");
+        }
+    });
+</script>

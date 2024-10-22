@@ -1,7 +1,9 @@
 <section class="mt-20 md:mt-40 lg:mt-28 mb-24">
     <div class="text-gris-cemento text-center md:text-right md:mr-[10%]">
-        <p class="font-normal text-2xl sm:text-3xl mb-12">Soluciones Integrales en Construcción Industrial</p>
-        <h2 class="font-bold text-4xl sm:text-5xl md:text-6xl max-w-screen-xl ml-auto">Combinamos experiencia técnica e innovación</h2>
+        <p class="font-normal text-2xl sm:text-3xl mb-12 max-sm:px-4">Soluciones Integrales en Construcción Industrial</p>
+        <h2 class="font-bold text-4xl sm:text-5xl md:text-6xl max-w-screen-xl ml-auto max-sm:px-4">
+            Combinamos experiencia <span class="inline lg:text-nowrap">técnica <span class="inline text-nowrap">e innovación</span></span>
+        </h2>
     </div>
     <section class="container mx-auto mt-24">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-0">
@@ -93,13 +95,3 @@
     z-index: -1; /* Para que la sombra quede detrás del contenido */
   }
 </style>
-<script>
-    document.querySelectorAll('h2').forEach(function(h2) {
-        let words = h2.innerHTML.split(' ');
-        if (words.length > 1) {
-            words[words.length - 2] += '&nbsp;' + words.pop();
-            h2.innerHTML = words.join(' ');
-        }
-    });
-
-</script>
