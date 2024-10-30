@@ -156,21 +156,26 @@ window.addEventListener('DOMContentLoaded', () => {
             padding-top: 18rem !important;
         }
     }
-    @media (min-width: 1550px) {
-        @media (min-height: 650px) {
-            .pantallas-angostas {
-                padding-top: 17rem !important;
-            }
+
+    @media (min-width: 1550px) and (min-height: 650px) {
+
+        .pantallas-angostas {
+            padding-top: 17rem !important;
         }
-        @media (min-height: 799) {
-            .pantallas-angostas {
-                padding-top: 20rem !important;
-            }
-        }
-        @media (min-height: 899px) {
-            .pantallas-angostas {
-                padding-top: 18rem !important;
-            }
+        
+    }
+
+    @media (min-width: 1550px) and (min-height: 799px) {
+
+        .pantallas-angostas {
+            padding-top: 20rem !important;
         }
     }
+    
+    @media (min-width: 1550px) and (min-height: 899px) {
+        .pantallas-angostas {
+            padding-top: 28rem !important;
+        }
+    }
+    
 </style>
