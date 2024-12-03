@@ -3,32 +3,74 @@
         {
             "original": "/images/proyectos/arga.jpeg",
             "thumb": "/images/proyectos/thumb/arga.webp",
-            "title": "Arga"
+            "title": "CENTRO MERCADO DE OBRA ARGA - MENDOZA",
+            "description": "Construcción de nave industrial para el depósito de aceros de construcción, perfilerías y mercado de obra con salones comerciales. Más de 12.000 m2."
         },
         {
             "original": "/images/proyectos/bodega-rural.jpeg",
             "thumb": "/images/proyectos/thumb/bodega-rural.webp",
-            "title": "Bodega la Rural"
+            "title": "BODEGA RUTINI LA RURAL",
+            "description": "Pisos Bodega Rutini - Tunuyán. Construcción de nave industrial de 1.200 m2. Apta cámara industrial."
         },
         {
             "original": "/images/proyectos/ezeiza.jpeg",
             "thumb": "/images/proyectos/thumb/ezeiza.webp",
-            "title": "Ezeiza"
+            "title": "HANGAR 5 - EZEIZA",
+            "description": "Pavimentos de hormigón con macrofibra de 32 cm, espeso de hormigón alisado 18.000 m2 y calles de circulación a pistas y movimientos internos de aviones 36.000 m2, para el hangar de mantenimiento de aviones de Aerolíneas Argentinas."
         },
         {
             "original": "/images/proyectos/lorenzo-automotores.jpeg",
             "thumb": "/images/proyectos/thumb/lorenzo-automotores.webp",
-            "title": "Lorenzo Automotores"
+            "title": "LORENZO AUTOMOTORES - MAIPÚ",
+            "description": "Piso de hormigón armado de 5.000 m2 para nave industrial."
         },
         {
             "original": "/images/proyectos/marolio.jpeg",
             "thumb": "/images/proyectos/thumb/marolio.webp",
-            "title": "Marolio"
+            "title": "PLANTA MAROLIO COSTA DE ARAUJO - LAVALLE",
+            "description": "Construcción de pavimentos industriales en almacén automático y pavimentos de playones de maniobras. Construcción de nave Tetra Recart, piletas de almacenamiento y fundaciones para calderas."
         },
         {
             "original": "/images/proyectos/planta-uno.jpeg",
             "thumb": "/images/proyectos/thumb/planta-uno.webp",
-            "title": "Planta uno"
+            "title": "COMPLEJO COMERCIAL PLANTA UNO",
+            "description": "Construcción de pisos interiores y exteriores para centro comercial, más de 5.000 m2. Tratamiento acrílico superficial."
+        },
+        {
+            "original": "/images/proyectos/bodega-pulenta-state.jpg",
+            "thumb": "/images/proyectos/thumb/bodega-pulenta-state.webp",
+            "title": "BODEGA PULENTA ESTATE",
+            "description": "Construcción de Nave de Insumos Secos. Superficie Interior 1.200 m2. Superficie Exterior, playones de maniobras 1.600 m2."
+        },
+        {
+            "original": "/images/proyectos/simplot-pareditas.jpg",
+            "thumb": "/images/proyectos/thumb/simplot-pareditas.webp",
+            "title": "SIMPLOT - PAREDITAS",
+            "description": "Construcción de naves industriales para el depósito de papas en más de 14.000 m2. Pavimento armado con terminación superficial. "
+        },
+        {
+            "original": "/images/proyectos/",
+            "thumb": "/images/image-not-found.webp",
+            "title": "FINCA LA LUZ",
+            "description": "Construcción de fundaciones con colocación de platinas para posterior montaje de galpón. Mampostería de bloques de hormigón. Construcción de piso alisado y veredas perimetrales."
+        },
+        {
+            "original": "/images/proyectos/",
+            "thumb": "/images/image-not-found.webp",
+            "title": "SIMPLOT - LUJÁN DE CUYO",
+            "description": "Construcción de fundaciones con colocación de platinas para posterior montaje de galpón. Mampostería de bloques de hormigón. Construcción de piso alisado y veredas perimetrales."
+        },
+        {
+            "original": "/images/proyectos/",
+            "thumb": "/images/image-not-found.webp",
+            "title": "GLOBANT - TANDIL - BSAS",
+            "description": "Construcción de pisos alisados industriales para cocheras. Superficie de 3.000 m2. Uso de macrofibras y postensado de pisos. Realizado en 3 días."
+        },
+        {
+            "original": "/images/proyectos/",
+            "thumb": "/images/image-not-found.webp",
+            "title": "SOLFRUT - SAN JUAN",
+            "description": "Ampliación de nave de almacenamiento. Construcción de pavimentos interiores en una superficie de 3.500 m2 con macrofibras."
         }
         
     ]
