@@ -99,6 +99,8 @@ function createCarouselItems(logosPerSlide: number) {
         // Crear el img dentro del slide
         const img = document.createElement('img');
         img.className = 'h-auto w-32 lg:w-40 2xl:w-44 relative mx-auto';
+        //aspect ratio
+        img.style.aspectRatio = logo.width + '/' + logo.height;
         img.src = logo.srcBlanco;
         slideDiv2.appendChild(img);
     });
