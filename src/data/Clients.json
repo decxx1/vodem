@@ -3,88 +3,123 @@
         {
             "srcGris": "/images/clientes/logo-gris/aerolineas-argentinas.svg",
             "srcBlanco": "/images/clientes/logo-blanco/aerolineas-argentinas.svg",
-            "alt": "logo de aerolineas argentinas"
+            "alt": "logo de aerolineas argentinas",
+            "width": "160",
+            "height": "68"
         },
         {
             "srcGris": "/images/clientes/logo-gris/aeropuertos-argentina.svg",
             "srcBlanco": "/images/clientes/logo-blanco/aeropuertos-argentina.svg",
-            "alt": "logo de aeropuertos argentina"
+            "alt": "logo de aeropuertos argentina",
+            "width": "160",
+            "height": "128"
         },
         {
             "srcGris": "/images/clientes/logo-gris/arga.svg",
             "srcBlanco": "/images/clientes/logo-blanco/arga.svg",
-            "alt": "logo de Arga mercado de obra"
+            "alt": "logo de Arga mercado de obra",
+            "width": "160",
+            "height": "130"
         },
         {
             "srcGris": "/images/clientes/logo-gris/boca-la-mitad-mas-uno.svg",
             "srcBlanco": "/images/clientes/logo-blanco/boca-la-mitad-mas-uno.svg",
-            "alt": "logo de boca la mitad mas uno"
+            "alt": "logo de boca la mitad mas uno",
+            "width": "160",
+            "height": "132"
         },
         {
             "srcGris": "/images/clientes/logo-gris/escorihuela-gascon.svg",
             "srcBlanco": "/images/clientes/logo-blanco/escorihuela-gascon.svg",
-            "alt": "logo de escorihuela gascon"
+            "alt": "logo de escorihuela gascon",
+            "width": "160",
+            "height": "50"
         },
         {
             "srcGris": "/images/clientes/logo-gris/familia-zuccardi.svg",
             "srcBlanco": "/images/clientes/logo-blanco/familia-zuccardi.svg",
-            "alt": "logo de familia zuccardi"
+            "alt": "logo de familia zuccardi",
+            "width": "160",
+            "height": "39"
         },
         {
             "srcGris": "/images/clientes/logo-gris/ford.svg",
             "srcBlanco": "/images/clientes/logo-blanco/ford.svg",
-            "alt": "logo de ford"
+            "alt": "logo de ford",
+            "width": "160",
+            "height": "60"
         },
         {
             "srcGris": "/images/clientes/logo-gris/globant.svg",
             "srcBlanco": "/images/clientes/logo-blanco/globant.svg",
-            "alt": "logo de globant"
+            "alt": "logo de globant",
+            "width": "160",
+            "height": "31"
         },
         {
             "srcGris": "/images/clientes/logo-gris/knauf.svg",
             "srcBlanco": "/images/clientes/logo-blanco/knauf.svg",
-            "alt": "logo de knauf"
+            "alt": "logo de knauf",
+            "width": "160",
+            "height": "101"
         },
         {
             "srcGris": "/images/clientes/logo-gris/marolio.svg",
             "srcBlanco": "/images/clientes/logo-blanco/marolio.svg",
-            "alt": "logo de marolio"
+            "alt": "logo de marolio",
+            "width": "160",
+            "height": "78"
         },
         {
             "srcGris": "/images/clientes/logo-gris/norton.svg",
             "srcBlanco": "/images/clientes/logo-blanco/norton.svg",
-            "alt": "logo de norton"
+            "alt": "logo de norton",
+            "width": "160",
+            "height": "91"
         },
         {
             "srcGris": "/images/clientes/logo-gris/procrear.svg",
             "srcBlanco": "/images/clientes/logo-blanco/procrear.svg",
-            "alt": "logo de procrear"
+            "alt": "logo de procrear",
+            "width": "160",
+            "height": "21"
         },
         {
             "srcGris": "/images/clientes/logo-gris/puma.svg",
             "srcBlanco": "/images/clientes/logo-blanco/puma.svg",
-            "alt": "logo de puma"
+            "alt": "logo de puma",
+            "width": "160",
+            "height": "79"
         },
         {
             "srcGris": "/images/clientes/logo-gris/quilmes.svg",
             "srcBlanco": "/images/clientes/logo-blanco/quilmes.svg",
-            "alt": "logo de quilmes"
+            "alt": "logo de quilmes",
+            "width": "160",
+            "height": "80"
         },
         
         {
             "srcGris": "/images/clientes/logo-gris/san-antonio.svg",
             "srcBlanco": "/images/clientes/logo-blanco/san-antonio.svg",
-            "alt": "logo de san antonio"
+            "alt": "logo de san antonio",
+            "width": "160",
+            "height": "61"
         },
         {
             "srcGris": "/images/clientes/logo-gris/simplot.svg",
             "srcBlanco": "/images/clientes/logo-blanco/simplot.svg",
             "alt": "logo de simplot"
+            ,
+            "width": "160",
+            "height": "67"
         },
         {
             "srcGris": "/images/clientes/logo-gris/volkswagen.svg",
             "srcBlanco": "/images/clientes/logo-blanco/volkswagen.svg",
-            "alt": "logo de volkswagen"
+            "alt": "logo de volkswagen",
+            "width": "160",
+            "height": "134"
         }
     ]
 }

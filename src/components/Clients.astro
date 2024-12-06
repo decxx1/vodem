@@ -24,6 +24,7 @@ const remainder2 = clients.length % 2;
                         remainder4 === 1 && index >= clients.length - 1 ? 'lg:col-span-12' : 'lg:col-span-3'
                     }`}
                     loading="lazy"
+                    style={{ aspectRatio: client.width + '/' + client.height }}
                 />
             ))
         }
