@@ -1,5 +1,10 @@
 ---
 import { proyects } from "@/data/Proyects.json";
+
+// Configure pagination
+const projectsPerPage = 6;
+const totalProjects = proyects.length;
+const totalPages = Math.ceil(totalProjects / projectsPerPage);
 ---
 <section class="mt-20 md:mt-40 lg:mt-32 xl:mt-28 mb-24">
     <div class="text-gris-cemento text-center md:text-right md:mr-[10%]">
@@ -7,10 +12,10 @@ import { proyects } from "@/data/Proyects.json";
         <h2 class="font-bold text-4xl sm:text-5xl md:text-6xl max-w-screen-xl ml-auto max-sm:px-4">Soluciones que marcan <span class="inline text-nowrap">la diferencia</span></h2>
     </div>
     <section class="container mx-auto mt-24">
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto">
+        <div id="projects-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto">
             {   
                 proyects.map((proyect, index) => (
-                    <div class="w-full h-full py-2 max-sm:px-6">
+                    <div class="project-item w-full h-full py-2 max-sm:px-6" data-index={index}>
                         <img 
                             src={proyect.thumb}
                             alt={proyect.title}
@@ -32,5 +37,117 @@ import { proyects } from "@/data/Proyects.json";
                 ))
             }
         </div>
+        
+        <!-- Pagination controls -->
+        <div class="pagination-container flex justify-center gap-2 items-center mt-12 mb-6">
+            <button id="prev-page" class="pagination-btn bg-gris-cemento text-white px-4 py-2 rounded-l-md hover:bg-amarillo hover:text-gris-cemento transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                <span class="sr-only">Anterior</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+                </svg>
+            </button>
+            
+            <div id="pagination-numbers" class="flex">
+                <!-- Pagination numbers will be inserted here by JavaScript -->
+            </div>
+            
+            <button id="next-page" class="pagination-btn bg-gris-cemento text-white px-4 py-2 rounded-r-md hover:bg-amarillo hover:text-gris-cemento transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                <span class="sr-only">Siguiente</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
     </section>
 </section>
+
+<script>
+    // Pagination functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const projectsPerPage = 9;
+        const totalProjects = document.querySelectorAll('.project-item').length;
+        const totalPages = Math.ceil(totalProjects / projectsPerPage);
+        
+        const projectItems = document.querySelectorAll('.project-item');
+        const paginationNumbers = document.getElementById('pagination-numbers');
+        const prevButton = document.getElementById('prev-page');
+        const nextButton = document.getElementById('next-page');
+        
+        let currentPage = 1;
+        
+        // Function to create pagination numbers
+        const createPaginationNumbers = () => {
+            paginationNumbers.innerHTML = '';
+            
+            for (let i = 1; i <= totalPages; i++) {
+                const pageNumber = document.createElement('button');
+                pageNumber.className = `pagination-number px-4 py-2 ${
+                    i === currentPage 
+                        ? 'bg-amarillo text-gris-cemento font-bold' 
+                        : 'bg-gris-cemento text-white hover:bg-amarillo hover:text-gris-cemento'
+                } transition-colors duration-300`;
+                pageNumber.textContent = i;
+                pageNumber.setAttribute('page-index', i);
+                pageNumber.setAttribute('aria-label', `Page ${i}`);
+                
+                paginationNumbers.appendChild(pageNumber);
+            }
+        };
+        
+        // Function to update pagination buttons state
+        const updatePaginationButtons = () => {
+            prevButton.disabled = currentPage === 1;
+            nextButton.disabled = currentPage === totalPages;
+            
+            document.querySelectorAll('.pagination-number').forEach(button => {
+                const pageIndex = Number(button.getAttribute('page-index'));
+                if (pageIndex === currentPage) {
+                    button.classList.remove('bg-gris-cemento', 'text-white');
+                    button.classList.add('bg-amarillo', 'text-gris-cemento', 'font-bold');
+                } else {
+                    button.classList.remove('bg-amarillo', 'text-gris-cemento', 'font-bold');
+                    button.classList.add('bg-gris-cemento', 'text-white');
+                }
+            });
+        };
+        
+        // Function to show projects for the current page
+        const setCurrentPage = (pageNum) => {
+            currentPage = pageNum;
+            
+            const prevRange = (pageNum - 1) * projectsPerPage;
+            const currRange = pageNum * projectsPerPage;
+            
+            projectItems.forEach((item, index) => {
+                item.style.display = (index >= prevRange && index < currRange) ? 'block' : 'none';
+            });
+            
+            updatePaginationButtons();
+        };
+        
+        // Initialize pagination
+        createPaginationNumbers();
+        setCurrentPage(1);
+        
+        // Event listeners for pagination buttons
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 1) {
+                setCurrentPage(currentPage - 1);
+            }
+        });
+        
+        nextButton.addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                setCurrentPage(currentPage + 1);
+            }
+        });
+        
+        // Event delegation for pagination numbers
+        paginationNumbers.addEventListener('click', (e) => {
+            if (e.target.classList.contains('pagination-number')) {
+                const pageIndex = Number(e.target.getAttribute('page-index'));
+                setCurrentPage(pageIndex);
+            }
+        });
+    });
+</script>
