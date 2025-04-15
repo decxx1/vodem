@@ -16,12 +16,24 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
             {   
                 proyects.map((proyect, index) => (
                     <div class="project-item w-full h-full py-2 max-sm:px-6" data-index={index}>
-                        <img 
-                            src={proyect.thumb}
-                            alt={proyect.title}
-                            class="object-cover w-full h-96 sm:h-64 lg:h-72 xl:h-80 2xl:h-96 hover:scale-105 transition-all duration-300 ease-in-out"
-                            loading="lazy"
-                        />
+                        <div class="relative overflow-hidden group">
+                            <img 
+                                src={proyect.thumb}
+                                alt={proyect.title}
+                                class="object-cover w-full h-96 sm:h-64 lg:h-72 xl:h-80 2xl:h-96 hover:scale-105 transition-all duration-300 ease-in-out"
+                                loading="lazy"
+                            />
+                            <button 
+                                class="expand-image-btn absolute top-2 right-2 bg-amarillo text-gris-cemento p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gris-cemento hover:text-amarillo z-10"
+                                data-image={proyect.original}
+                                data-title={proyect.title}
+                                aria-label="Ver imagen completa"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 4h-4m4 0l-5-5" />
+                                </svg>
+                            </button>
+                        </div>
                         <h3 class="text-gris-cemento font-semibold uppercase text-md ml-2 mt-4">
                             <svg class="inline mr-2 w-9" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38.39 12">
                                 <path style="fill:#f6ca0f" d="M0 0h38.39v12H0z" data-name="Capa 1"/>
@@ -60,6 +72,21 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
         </div>
     </section>
 </section>
+
+<!-- Image Modal -->
+<div id="image-modal" class="fixed inset-0 z-50 flex items-center justify-center hidden bg-black bg-opacity-80 transition-opacity duration-300 opacity-0">
+    <div class="relative max-w-4xl mx-auto p-4 w-full">
+        <button id="close-modal" class="absolute top-2 right-2 text-white bg-gris-cemento hover:bg-amarillo hover:text-gris-cemento p-2 rounded-full transition-colors duration-300 z-20">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="modal-content transform scale-95 transition-transform duration-300">
+            <img id="modal-image" src="" alt="" class="max-h-[80vh] mx-auto object-contain">
+            <h3 id="modal-title" class="text-white text-center mt-4 font-semibold text-xl"></h3>
+        </div>
+    </div>
+</div>
 
 <script>
     // Pagination functionality
@@ -147,6 +174,71 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
             if (e.target.classList.contains('pagination-number')) {
                 const pageIndex = Number(e.target.getAttribute('page-index'));
                 setCurrentPage(pageIndex);
+            }
+        });
+    });
+
+    // Image Modal Functionality
+    document.addEventListener('DOMContentLoaded', () => {
+        const modal = document.getElementById('image-modal');
+        const modalImage = document.getElementById('modal-image');
+        const modalTitle = document.getElementById('modal-title');
+        const closeModalBtn = document.getElementById('close-modal');
+        const expandButtons = document.querySelectorAll('.expand-image-btn');
+        const modalContent = document.querySelector('.modal-content');
+        
+        // Open modal when expand button is clicked
+        expandButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const imageSrc = button.getAttribute('data-image');
+                const imageTitle = button.getAttribute('data-title');
+                
+                modalImage.src = imageSrc;
+                modalTitle.textContent = imageTitle;
+                
+                // Show modal with animation
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.add('opacity-100');
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 10);
+                
+                // Prevent scrolling on body
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close modal function
+        const closeModal = () => {
+            modalContent.classList.remove('scale-100');
+            modalContent.classList.add('scale-95');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                // Re-enable scrolling
+                document.body.style.overflow = '';
+            }, 300);
+        };
+        
+        // Close modal when close button is clicked
+        closeModalBtn.addEventListener('click', closeModal);
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
             }
         });
     });
