@@ -82,7 +82,13 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
             </svg>
         </button>
         <div class="modal-content transform scale-95 transition-transform duration-300">
-            <img id="modal-image" src="" alt="" class="max-h-[80vh] mx-auto object-contain">
+            <!-- Loading Spinner -->
+            <div id="loading-spinner" class="hidden">
+                <div class="flex justify-center items-center h-[50vh]">
+                    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-amarillo"></div>
+                </div>
+            </div>
+            <img id="modal-image" src="" alt="" class="max-h-[80vh] mx-auto object-contain hidden">
             <h3 id="modal-title" class="text-white text-center mt-4 font-semibold text-xl"></h3>
         </div>
     </div>
@@ -186,6 +192,7 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
         const closeModalBtn = document.getElementById('close-modal');
         const expandButtons = document.querySelectorAll('.expand-image-btn');
         const modalContent = document.querySelector('.modal-content');
+        const loadingSpinner = document.getElementById('loading-spinner');
         
         // Open modal when expand button is clicked
         expandButtons.forEach(button => {
@@ -194,17 +201,38 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
                 const imageSrc = button.getAttribute('data-image');
                 const imageTitle = button.getAttribute('data-title');
                 
-                modalImage.src = imageSrc;
+                // Show modal with animation first
+                modal.classList.remove('hidden');
+                
+                // Show loading spinner, hide image
+                loadingSpinner.classList.remove('hidden');
+                modalImage.classList.add('hidden');
+                
+                // Clear previous image and set new title
+                modalImage.src = '';
                 modalTitle.textContent = imageTitle;
                 
-                // Show modal with animation
-                modal.classList.remove('hidden');
                 setTimeout(() => {
                     modal.classList.add('opacity-100');
                     modal.classList.remove('opacity-0');
                     modalContent.classList.remove('scale-95');
                     modalContent.classList.add('scale-100');
                 }, 10);
+                
+                // Load new image
+                const newImage = new Image();
+                newImage.onload = function() {
+                    // Hide spinner, show image
+                    loadingSpinner.classList.add('hidden');
+                    modalImage.src = imageSrc;
+                    modalImage.classList.remove('hidden');
+                };
+                newImage.onerror = function() {
+                    // If image fails to load, hide spinner and show error message
+                    loadingSpinner.classList.add('hidden');
+                    modalTitle.textContent = 'Error al cargar la imagen: ' + imageTitle;
+                };
+                newImage.src = imageSrc;
                 
                 // Prevent scrolling on body
                 document.body.style.overflow = 'hidden';
@@ -220,6 +248,9 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
             
             setTimeout(() => {
                 modal.classList.add('hidden');
+                // Clear the image src to prevent the old image from showing on next open
+                modalImage.src = '';
+                modalImage.classList.add('hidden');
                 // Re-enable scrolling
                 document.body.style.overflow = '';
             }, 300);
