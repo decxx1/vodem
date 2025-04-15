@@ -39,10 +39,10 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
         </div>
         
         <!-- Pagination controls -->
-        <div class="pagination-container flex justify-center gap-2 items-center mt-12 mb-6">
-            <button id="prev-page" class="pagination-btn bg-gris-cemento text-white px-4 py-2 rounded-l-md hover:bg-amarillo hover:text-gris-cemento transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+        <div class="pagination-container flex justify-center items-center mt-12 mb-6">
+            <button id="prev-page" class="pagination-btn border border-gris-bg bg-gris-cemento text-white px-4 py-2 rounded-l-md hover:bg-amarillo hover:text-gris-cemento transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-gris-cemento disabled:hover:text-white">
                 <span class="sr-only">Anterior</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
                 </svg>
             </button>
@@ -51,9 +51,9 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
                 <!-- Pagination numbers will be inserted here by JavaScript -->
             </div>
             
-            <button id="next-page" class="pagination-btn bg-gris-cemento text-white px-4 py-2 rounded-r-md hover:bg-amarillo hover:text-gris-cemento transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+            <button id="next-page" class="pagination-btn border border-gris-bg bg-gris-cemento text-white px-4 py-2 rounded-r-md hover:bg-amarillo hover:text-gris-cemento transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-gris-cemento disabled:hover:text-white">
                 <span class="sr-only">Siguiente</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
                 </svg>
             </button>
@@ -81,7 +81,7 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
             
             for (let i = 1; i <= totalPages; i++) {
                 const pageNumber = document.createElement('button');
-                pageNumber.className = `pagination-number px-4 py-2 ${
+                pageNumber.className = `pagination-number px-4 py-2 border border-gris-bg ${
                     i === currentPage 
                         ? 'bg-amarillo text-gris-cemento font-bold' 
                         : 'bg-gris-cemento text-white hover:bg-amarillo hover:text-gris-cemento'
