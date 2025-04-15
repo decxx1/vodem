@@ -1,6 +1,24 @@
 {
     "proyects": [
         {
+            "original": "/images/proyectos/yesos-knauf.jpeg",
+            "thumb": "/images/proyectos/thumb/yesos-knauf.webp",
+            "title": "YESOS KNAUF",
+            "description": "Construcción Comedor Yesos Knauf - Sup. Cubierta 240 m2 - Construcción en Seco."
+        },
+        {
+            "original": "/images/proyectos/tomba-godoy-cruz.jpeg",
+            "thumb": "/images/proyectos/thumb/tomba-godoy-cruz.webp",
+            "title": "CLUB GODOY CRUZ ANTONIO TOMBA",
+            "description": "Construcción de Piso multipropósito. Nuevo Estadio Feliciano Gambarte. Movimiento de Suelo - Pavimentos de Hormigón. 4200 m2."
+        },
+        {
+            "original": "/images/proyectos/gran-boedo.jpeg",
+            "thumb": "/images/proyectos/thumb/gran-boedo.webp",
+            "title": "CASAS  L 51 Y L 52 - BARRIO GRAN BOEDO",
+            "description": "Cálculos, habilitaciones, construcción, administración de obra y comercialización"
+        },
+        {
             "original": "/images/proyectos/arga.jpeg",
             "thumb": "/images/proyectos/thumb/arga.webp",
             "title": "CENTRO MERCADO DE OBRA ARGA - MENDOZA",
