@@ -77,7 +77,7 @@ export default function Form() {
                     Comunicate con nosotros
                 </h2>
             </div>
-            <form onSubmit={handleSubmit} method="post" id="contactForm" className="max-md:px-6 grid grid-cols-1 gap-4 mx-auto max-w-screen-md sm:grid-cols-2">
+            <form onSubmit={handleSubmit} method="post" id="contactForm" className="max-md:px-6 grid grid-cols-1 gap-4 mx-auto max-w-(--breakpoint-md) sm:grid-cols-2">
                 <Toaster richColors position="top-right" />
                 <div className="sm:col-span-2">
                     <input

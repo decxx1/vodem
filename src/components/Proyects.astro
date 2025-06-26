@@ -9,7 +9,7 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
 <section class="mt-20 md:mt-40 lg:mt-32 xl:mt-28 mb-24">
     <div class="text-gris-cemento text-center md:text-right md:mr-[10%]">
         <p class="font-normal text-2xl sm:text-3xl mb-12 max-sm:px-4"><span class="p-1 bg-amarillo font-bold inline">Resultados tangibles:</span> El impacto de nuestros proyectos</p>
-        <h2 class="font-bold text-4xl sm:text-5xl md:text-6xl max-w-screen-xl ml-auto max-sm:px-4">Soluciones que marcan <span class="inline text-nowrap">la diferencia</span></h2>
+        <h2 class="font-bold text-4xl sm:text-5xl md:text-6xl max-w-(--breakpoint-xl) ml-auto max-sm:px-4">Soluciones que marcan <span class="inline text-nowrap">la diferencia</span></h2>
     </div>
     <section class="container mx-auto mt-24">
         <div id="projects-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto">
@@ -24,7 +24,7 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
                                 loading="lazy"
                             />
                             <button 
-                                class="expand-image-btn absolute top-2 right-2 bg-amarillo text-gris-cemento p-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gris-cemento hover:text-amarillo z-10"
+                                class="expand-image-btn absolute top-2 right-2 bg-amarillo text-gris-cemento p-2 rounded-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-gris-cemento hover:text-amarillo z-10"
                                 data-image={proyect.original}
                                 data-title={proyect.title}
                                 aria-label="Ver imagen completa"
