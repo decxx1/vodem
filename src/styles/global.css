@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+@source '../../src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}';
+@source '../../node_modules/flowbite/**/*.js';
+
+@theme {
+    --font-montserrat: 'Montserrat Variable', 'sans-serif';
+    --color-gris-cemento: #4a5058;
+    --color-gris-claro:#e8e8e8;
+    --color-gris-bg: #eae8e4;
+    --color-amarillo: #f6ca0f;
+}
+
+@plugin "flowbite/plugin";
+@plugin "@tailwindcss/typography";
