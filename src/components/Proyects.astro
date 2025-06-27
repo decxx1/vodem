@@ -6,7 +6,7 @@ const projectsPerPage = 6;
 const totalProjects = proyects.length;
 const totalPages = Math.ceil(totalProjects / projectsPerPage);
 ---
-<section class="mt-20 md:mt-40 lg:mt-32 xl:mt-28 mb-24">
+<section class="mt-20 md:mt-40 lg:mt-32 xl:mt-28">
     <div class="text-gris-cemento text-center md:text-right md:mr-[10%]">
         <p class="font-normal text-2xl sm:text-3xl mb-12 max-sm:px-4"><span class="p-1 bg-amarillo font-bold">Resultados tangibles:</span> El impacto de nuestros proyectos</p>
         <h2 class="font-bold text-4xl sm:text-5xl md:text-6xl max-w-(--breakpoint-xl) ml-auto max-sm:px-4">Soluciones que marcan <span class="text-nowrap">la diferencia</span></h2>
@@ -51,7 +51,7 @@ const totalPages = Math.ceil(totalProjects / projectsPerPage);
         </div>
         
         <!-- Pagination controls -->
-        <div class="pagination-container flex justify-center items-center mt-12 mb-6">
+        <div class="pagination-container flex justify-center items-center mt-12">
             <button id="prev-page" class="pagination-btn border border-gris-bg bg-gris-cemento text-white px-4 py-2 rounded-l-md hover:bg-amarillo hover:text-gris-cemento transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-gris-cemento disabled:hover:text-white">
                 <span class="sr-only">Anterior</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">

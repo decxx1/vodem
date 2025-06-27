@@ -18,7 +18,12 @@ const { title } = Astro.props;
         </div>
     </div>
     <div class="w-full bg-amarillo py-10 md:py-16">
-        <h2 class="uppercase text-center md:text-right text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-gris-cemento md:mr-[10%]">{title}</h2>
+        <h2 class:list={[
+            title.length > 9
+                ? "text-xl sm:text-xl md:text-2xl lg:text-4xl font-medium"
+                : "text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-light",
+            "uppercase text-center md:text-right text-gris-cemento md:mr-[10%]"
+        ]}>{title}</h2>
     </div>
 </section>
 

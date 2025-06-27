@@ -1,0 +1,24 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Claims from '@/components/Claims.astro';
+import BreadCrumbs from '@/components/BreadCrumbs.astro';
+const preloadImages = [
+	{
+		href:"/images/index/hero.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Vodem - Políticas de reclamos y quejas"
+	canonical="https://vodem.com.ar/politica-reclamos"
+	metaTitle="Vodem - Políticas de reclamos y quejas"
+	metaDescription="Código de Ética o de Conducta, Se desarrollarán políticas y procedimientos específicos para abordar los riesgos identificados en la evaluación de riesgos"
+	metaImg="https://vodem.com.ar/images/index/hero.webp"
+	preLoad={preloadImages}
+>
+    <BreadCrumbs title="PROGRAMA DE INTEGRIDAD" />
+    <Claims />
+</Layout>
