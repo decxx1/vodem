@@ -2,6 +2,7 @@
 import { EMAIL, TELPHONE_READBLE, TELPHONE_LINKEABLE, INSTAGRAM, LINKEDIN } from 'astro:env/client';
 import Envelope from '@/icones/Email.astro';
 import Phone from '@/icones/Phone.astro';
+import Integrity from '@/icones/Integrity.astro';
 ---
 <footer class="bg-gris-cemento sm:py-20 py-16">
     <section class="flex items-center justify-center">
@@ -20,8 +21,7 @@ import Phone from '@/icones/Phone.astro';
                     <ul class="text-lg lg:text-lg xl:text-xl font-medium text-center sm:text-left">
                         <li class="inline-flex"><a class="hover:text-amarillo inline-flex items-center mr-2" href=`tel:${TELPHONE_LINKEABLE}` target="_blank"><Phone extraClass='mr-2 h-8 w-8'/>{TELPHONE_READBLE}</a> | <a class="hover:text-amarillo ml-2" href="/contacto">Contacto</a></li>
                         <li><a class="hover:text-amarillo inline-flex items-center" href=`mailto:${EMAIL}` target="_blank"><Envelope extraClass='mr-2 h-8 w-8'/>{EMAIL}</a></li>
-                        <li></li>
-                        <li><a class="hover:text-amarillo" href="/politica-reclamos">Política de reclamos y quejas</a></li>
+                        <li><a class="hover:text-amarillo inline-flex items-center" href="/programa-integridad"><Integrity extraClass='mr-2 h-8 w-8' />Programa de Integridad</a></li>
                     </ul>
                     <svg class="h-20 lg:h-28 max-lg:hidden" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.37 107"><path style="fill:#f6ca0f" d="M0 0h4.37v107H0z" data-name="Capa 1"/></svg>
                 </div>

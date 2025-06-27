@@ -1,0 +1,24 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Claims from '@/components/Claims.astro';
+import BreadCrumbs from '@/components/BreadCrumbs.astro';
+const preloadImages = [
+	{
+		href:"/images/index/hero.webp",
+		as: "image",
+		type: "image/webp",
+	}
+];
+---
+
+<Layout
+	title="Vodem - Programa de Integridad"
+	canonical="https://vodem.com.ar/programa-integridad"
+	metaTitle="Vodem - Programa de Integridad"
+	metaDescription="Firme y explícito compromiso con el Programa de Integridad, la prevención de la corrupción y el cumplimiento normativo, tal como surge de la declaración expresa firmada en fecha 2 de Mayo de 2025 por el administrador. Este compromiso se traduce en la asignación de los recursos necesarios y en la promoción activa de una cultura de integridad en toda la organización."
+	metaImg="https://vodem.com.ar/images/index/hero.webp"
+	preLoad={preloadImages}
+>
+    <BreadCrumbs title="PROGRAMA DE INTEGRIDAD" />
+    <Claims />
+</Layout>
