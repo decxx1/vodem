@@ -1,6 +1,8 @@
 ---
 import { EMAIL, TELPHONE_READBLE, TELPHONE_LINKEABLE, INSTAGRAM, LINKEDIN } from 'astro:env/client';
 import Envelope from '@/icones/Email.astro';
+import World from '@/icones/World.astro';
+import Document from '@/icones/Document.astro';
 import Phone from '@/icones/Phone.astro';
 import Integrity from '@/icones/Integrity.astro';
 ---
@@ -16,31 +18,41 @@ import Integrity from '@/icones/Integrity.astro';
                 />
             </div>
             <div class="max-sm:mt-6">
-                <div class="flex justify-center sm:justify-between">
-                    <svg class="h-20 lg:h-28 max-lg:hidden" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.37 107"><path style="fill:#f6ca0f" d="M0 0h4.37v107H0z" data-name="Capa 1"/></svg>
-                    <ul class="text-lg lg:text-lg xl:text-xl font-medium text-center sm:text-left">
-                        <li class="inline-flex"><a class="hover:text-amarillo inline-flex items-center mr-2" href=`tel:${TELPHONE_LINKEABLE}` target="_blank"><Phone extraClass='mr-2 h-8 w-8'/>{TELPHONE_READBLE}</a> | <a class="hover:text-amarillo ml-2" href="/contacto">Contacto</a></li>
-                        <li><a class="hover:text-amarillo inline-flex items-center" href=`mailto:${EMAIL}` target="_blank"><Envelope extraClass='mr-2 h-8 w-8'/>{EMAIL}</a></li>
-                        <li><a class="hover:text-amarillo inline-flex items-center" href="/programa-integridad"><Integrity extraClass='mr-2 h-8 w-8' />Programa de Integridad</a></li>
+                <div class="flex items-center justify-center sm:justify-between">
+                    <svg class="h-20 lg:h-32 max-lg:hidden" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.37 107"><path style="fill:#f6ca0f" d="M0 0h4.37v107H0z" data-name="Capa 1"/></svg>
+                    <ul class="text-lg lg:text-lg xl:text-xl font-medium text-center">
+                        <li><a class="hover:text-amarillo inline-flex items-center" href="/programa-integridad"><Integrity extraClass='mr-2 size-8' />Programa de Integridad</a></li>
+                        <li><p class=" inline-flex items-center" ><World extraClass='mr-2 size-8'/>Web Carbon A+</p></li>
+                        <li class="text-sm lg:text-base xl:text-lg mt-1 text-center">
+                            <span class="border-2 border-[#77bb5d] px-2 py-1">0.3g of CO /view</span>
+                            <span class="bg-[#77bb5d] text-gris-cemento font-bold border-2 border-[#77bb5d] -ml-2 px-2 py-1">Website Carbon</span>
+                            <p class="font-light text-center text-xs lg:text-sm xl:text-base mt-1">Cleaner than 99% of pages tested</p>
+                        </li>
                     </ul>
-                    <svg class="h-20 lg:h-28 max-lg:hidden" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.37 107"><path style="fill:#f6ca0f" d="M0 0h4.37v107H0z" data-name="Capa 1"/></svg>
+                    <svg class="h-20 lg:h-32 max-lg:hidden" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.37 107"><path style="fill:#f6ca0f" d="M0 0h4.37v107H0z" data-name="Capa 1"/></svg>
                 </div>
             </div>
             <div class="flex justify-center sm:justify-start lg:justify-center items-center sm:max-lg:col-span-2 max-lg:mt-6">
                 <div class="flex justify-center items-center">
-                    <p class="text-lg md:text-xl lg:text-2xl font-medium mr-3">Seguinos en</p>
-                    <a href={INSTAGRAM} target="_blank" class="group" rel="noreferrer noopener">
-                        <svg class="w-12 h-12 lg:w-14 lg:h-14 mr-2 hover:text-amarillo group-hover:text-amarillo"  xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="M17.34 5.46a1.2 1.2 0 1 0 1.2 1.2a1.2 1.2 0 0 0-1.2-1.2m4.6 2.42a7.6 7.6 0 0 0-.46-2.43a4.9 4.9 0 0 0-1.16-1.77a4.7 4.7 0 0 0-1.77-1.15a7.3 7.3 0 0 0-2.43-.47C15.06 2 14.72 2 12 2s-3.06 0-4.12.06a7.3 7.3 0 0 0-2.43.47a4.8 4.8 0 0 0-1.77 1.15a4.7 4.7 0 0 0-1.15 1.77a7.3 7.3 0 0 0-.47 2.43C2 8.94 2 9.28 2 12s0 3.06.06 4.12a7.3 7.3 0 0 0 .47 2.43a4.7 4.7 0 0 0 1.15 1.77a4.8 4.8 0 0 0 1.77 1.15a7.3 7.3 0 0 0 2.43.47C8.94 22 9.28 22 12 22s3.06 0 4.12-.06a7.3 7.3 0 0 0 2.43-.47a4.7 4.7 0 0 0 1.77-1.15a4.85 4.85 0 0 0 1.16-1.77a7.6 7.6 0 0 0 .46-2.43c0-1.06.06-1.4.06-4.12s0-3.06-.06-4.12M20.14 16a5.6 5.6 0 0 1-.34 1.86a3.06 3.06 0 0 1-.75 1.15a3.2 3.2 0 0 1-1.15.75a5.6 5.6 0 0 1-1.86.34c-1 .05-1.37.06-4 .06s-3 0-4-.06a5.7 5.7 0 0 1-1.94-.3a3.3 3.3 0 0 1-1.1-.75a3 3 0 0 1-.74-1.15a5.5 5.5 0 0 1-.4-1.9c0-1-.06-1.37-.06-4s0-3 .06-4a5.5 5.5 0 0 1 .35-1.9A3 3 0 0 1 5 5a3.1 3.1 0 0 1 1.1-.8A5.7 5.7 0 0 1 8 3.86c1 0 1.37-.06 4-.06s3 0 4 .06a5.6 5.6 0 0 1 1.86.34a3.06 3.06 0 0 1 1.19.8a3.1 3.1 0 0 1 .75 1.1a5.6 5.6 0 0 1 .34 1.9c.05 1 .06 1.37.06 4s-.01 3-.06 4M12 6.87A5.13 5.13 0 1 0 17.14 12A5.12 5.12 0 0 0 12 6.87m0 8.46A3.33 3.33 0 1 1 15.33 12A3.33 3.33 0 0 1 12 15.33"/></svg>                        
-                    </a>
-                    <a href={LINKEDIN} target="_blank" class="group" rel="noreferrer noopener">
-                        <svg class="w-10 h-10 lg:w-12 lg:h-12 mr-2 hover:text-amarillo group-hover:text-amarillo" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037c-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85c3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.06 2.06 0 0 1-2.063-2.065a2.064 2.064 0 1 1 2.063 2.065m1.782 13.019H3.555V9h3.564zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
-                    </a>
+                    <ul class="text-lg lg:text-lg xl:text-xl font-medium text-center sm:text-left">
+                        <li class="inline-flex"><a class="hover:text-amarillo inline-flex items-center mr-2" href=`tel:${TELPHONE_LINKEABLE}` target="_blank"><Phone extraClass='mr-2 size-8'/>{TELPHONE_READBLE}</a> | <a class="hover:text-amarillo ml-2" href="/contacto">Contacto</a></li>
+                        <li><a class="hover:text-amarillo inline-flex items-center" href=`mailto:${EMAIL}` target="_blank"><Envelope extraClass='mr-2 size-8'/>{EMAIL}</a></li>
+                        <li class="flex justify-center items-center">
+                            <p class="mr-3">Seguinos en</p>
+                            <a href={INSTAGRAM} target="_blank" class="group" rel="noreferrer noopener">
+                                <svg class="size-9 lg:size-11 mr-2 hover:text-amarillo group-hover:text-amarillo"  xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24"><path fill="currentColor" d="M17.34 5.46a1.2 1.2 0 1 0 1.2 1.2a1.2 1.2 0 0 0-1.2-1.2m4.6 2.42a7.6 7.6 0 0 0-.46-2.43a4.9 4.9 0 0 0-1.16-1.77a4.7 4.7 0 0 0-1.77-1.15a7.3 7.3 0 0 0-2.43-.47C15.06 2 14.72 2 12 2s-3.06 0-4.12.06a7.3 7.3 0 0 0-2.43.47a4.8 4.8 0 0 0-1.77 1.15a4.7 4.7 0 0 0-1.15 1.77a7.3 7.3 0 0 0-.47 2.43C2 8.94 2 9.28 2 12s0 3.06.06 4.12a7.3 7.3 0 0 0 .47 2.43a4.7 4.7 0 0 0 1.15 1.77a4.8 4.8 0 0 0 1.77 1.15a7.3 7.3 0 0 0 2.43.47C8.94 22 9.28 22 12 22s3.06 0 4.12-.06a7.3 7.3 0 0 0 2.43-.47a4.7 4.7 0 0 0 1.77-1.15a4.85 4.85 0 0 0 1.16-1.77a7.6 7.6 0 0 0 .46-2.43c0-1.06.06-1.4.06-4.12s0-3.06-.06-4.12M20.14 16a5.6 5.6 0 0 1-.34 1.86a3.06 3.06 0 0 1-.75 1.15a3.2 3.2 0 0 1-1.15.75a5.6 5.6 0 0 1-1.86.34c-1 .05-1.37.06-4 .06s-3 0-4-.06a5.7 5.7 0 0 1-1.94-.3a3.3 3.3 0 0 1-1.1-.75a3 3 0 0 1-.74-1.15a5.5 5.5 0 0 1-.4-1.9c0-1-.06-1.37-.06-4s0-3 .06-4a5.5 5.5 0 0 1 .35-1.9A3 3 0 0 1 5 5a3.1 3.1 0 0 1 1.1-.8A5.7 5.7 0 0 1 8 3.86c1 0 1.37-.06 4-.06s3 0 4 .06a5.6 5.6 0 0 1 1.86.34a3.06 3.06 0 0 1 1.19.8a3.1 3.1 0 0 1 .75 1.1a5.6 5.6 0 0 1 .34 1.9c.05 1 .06 1.37.06 4s-.01 3-.06 4M12 6.87A5.13 5.13 0 1 0 17.14 12A5.12 5.12 0 0 0 12 6.87m0 8.46A3.33 3.33 0 1 1 15.33 12A3.33 3.33 0 0 1 12 15.33"/></svg>                        
+                            </a>
+                            <a href={LINKEDIN} target="_blank" class="group" rel="noreferrer noopener">
+                                <svg class="size-7 lg:size-9 mr-2 hover:text-amarillo group-hover:text-amarillo" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037c-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85c3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.06 2.06 0 0 1-2.063-2.065a2.064 2.064 0 1 1 2.063 2.065m1.782 13.019H3.555V9h3.564zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 </footer>
 <p class="bg-gris-cemento pb-24 sm:pb-10 text-white text-center text-md">
-    Diseña <span class="font-bold hover:text-amarillo cursor-pointer">Polvora</span>
+    Diseña <a class="font-bold hover:text-amarillo cursor-pointer" href="https://www.linkedin.com/company/tres-veces-tres" target="_blank">TRES VECES TRES</a>
      - <span class="text-nowrap">Desarrolla 
 <a class="font-bold hover:text-amarillo" href="https://manejoweb.com.ar" target="_blank">ManejoWeb</a></span></p>
